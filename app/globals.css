@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+.handlee {
+	font-family: "Handlee", cursive;
+	font-style: normal;
+}
+
+@keyframes orbit {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin-slow {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.animate-orbit {
+	animation-name: orbit;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.animate-spin-slow {
+	animation-name: spin-slow;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
