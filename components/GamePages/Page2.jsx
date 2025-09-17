@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const Page2 = ({ goNext }) => {
 	const [showFix, setShowFix] = useState(false);
@@ -54,7 +55,6 @@ const Page2 = ({ goNext }) => {
 
 	return (
 		<>
-			{/* Continue button (only shows when bug is fixed) */}
 			{showFix && (
 				<motion.div
 					initial={{ opacity: 0, y: 10 }}
@@ -67,12 +67,12 @@ const Page2 = ({ goNext }) => {
 						className="w-[10vw] h-[5vh] absolute top-0 left-0 z-0 object-cover"
 						alt=""
 					/>
-					<button
-						onClick={goNext}
+					<Link
+						href={"/page3"}
 						className="z-10 text-[2.25vh] flex items-center justify-center w-full h-full handlee font-semibold tracking-[1px] cursor-pointer"
 					>
 						Continue
-					</button>
+					</Link>
 				</motion.div>
 			)}
 

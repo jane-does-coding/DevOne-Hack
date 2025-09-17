@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaVirusCovid, FaRegFolder, FaRegFolderOpen } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Page3({ goNext }) {
 	const [progress, setProgress] = useState(40);
@@ -9,7 +10,6 @@ export default function Page3({ goNext }) {
 	const [loading, setLoading] = useState(false);
 	const [peepImg, setPeepImg] = useState("/imgs/peep.png");
 
-	// folders state
 	const [folders, setFolders] = useState(
 		[...Array(6)].map(() => ({ open: false, virus: false }))
 	);
@@ -19,7 +19,6 @@ export default function Page3({ goNext }) {
 	const [deleteProgress, setDeleteProgress] = useState(0);
 
 	useEffect(() => {
-		// place virus in exactly one folder
 		setFolders((prev) =>
 			prev.map((f, i) => ({ ...f, virus: i === virusIndex }))
 		);
@@ -46,7 +45,6 @@ export default function Page3({ goNext }) {
 	};
 
 	const handleFolderClick = (index) => {
-		// prevent closing if deleting
 		if (deletingVirus) return;
 		setFolders((prev) =>
 			prev.map((f, i) => (i === index ? { ...f, open: !f.open } : f))
@@ -86,12 +84,12 @@ export default function Page3({ goNext }) {
 						className="w-[10vw] h-[5vh] absolute top-0 left-0 z-0 object-cover"
 						alt=""
 					/>
-					<button
-						onClick={goNext}
+					<Link
+						href={"/page4"}
 						className="z-10 text-[2.25vh] flex items-center justify-center w-full h-full handlee font-semibold tracking-[1px]"
 					>
 						Continue
-					</button>
+					</Link>
 				</motion.div>
 			)}
 

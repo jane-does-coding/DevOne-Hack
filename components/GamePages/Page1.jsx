@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const hats = [
 	{
@@ -80,12 +81,12 @@ export default function Page1({ goNext }) {
 					className="w-[10vw] h-[5vh] absolute top-0 left-0 z-0 object-cover"
 					alt=""
 				/>
-				<button
-					onClick={goNext}
+				<Link
+					href={"page2"}
 					className="z-10 text-[2.25vh] flex items-center justify-center w-full h-full handlee font-semibold tracking-[1px] cursor-pointer"
 				>
 					Continue
-				</button>
+				</Link>
 			</motion.div>
 
 			<div className="flex flex-col border-2 border-amber-300/0 max-w-[32.5vw]">

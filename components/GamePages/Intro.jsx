@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const Intro = ({ goNext }) => {
+const Intro = () => {
 	const [peeps, setPeeps] = useState([]);
 
 	useEffect(() => {
-		// Generate randomness only on client
 		const generated = Array.from({ length: 70 }, (_, i) => ({
 			id: i,
 			distance: 120 + Math.random() * 70,
@@ -117,12 +117,12 @@ const Intro = ({ goNext }) => {
 							className="w-[10vw] h-[5vh] absolute top-0 left-0 z-0 object-cover rotate-[180deg]"
 							alt=""
 						/>
-						<button
-							onClick={goNext}
+						<Link
+							href={"/page1"}
 							className="z-10 text-[2.25vh] flex items-center justify-center w-full h-full handlee font-semibold tracking-[1px] cursor-pointer"
 						>
 							Start
-						</button>
+						</Link>
 					</motion.div>
 				</div>
 			</div>

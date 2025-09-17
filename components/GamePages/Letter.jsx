@@ -29,6 +29,7 @@ import {
 	SiAxios,
 } from "react-icons/si";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Letter({
 	today,
@@ -104,12 +105,12 @@ export default function Letter({
 				transition={{ duration: 0.3, delay: 0.5 }}
 				className="flex items-center justify-center w-[10vw] h-[5vh] bg-white rounded-[2vh] cursor-pointer mx-auto mt-6 relative"
 			>
-				<button
-					onClick={goNext}
+				<Link
+					href={"/page6"}
 					className="z-10 underline text-[2.25vh] flex items-center justify-center w-full h-full handlee font-semibold tracking-[1px] cursor-pointer"
 				>
 					Continue <FaArrowRightLong className="ml-[1vw] text-[2vh]" />
-				</button>
+				</Link>
 			</motion.div>
 		</motion.div>
 	);

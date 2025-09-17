@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const projects = [
 	{
@@ -86,12 +87,12 @@ export default function Page4({ goNext }) {
 					className="w-[10vw] h-[5vh] absolute top-0 left-0 z-0 object-cover"
 					alt=""
 				/>
-				<button
-					onClick={goNext}
+				<Link
+					href={"/page5"}
 					className="z-10 text-[2.25vh] flex items-center justify-center w-full h-full handlee font-semibold tracking-[1px]"
 				>
 					Continue
-				</button>
+				</Link>
 			</motion.div>
 
 			{/* Left Section */}
