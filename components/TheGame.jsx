@@ -8,8 +8,8 @@ import Intro from "./GamePages/Intro";
 import Outro from "./GamePages/Outro";
 import { AnimatePresence, motion } from "framer-motion";
 import Page3 from "./GamePages/Page3";
-import Page5 from "./GamePages/Page5";
-
+/* import Page5 from "./GamePages/Page5";
+ */
 const TheGame = () => {
 	const [step, setStep] = useState(0);
 

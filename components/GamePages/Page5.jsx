@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsMailbox, BsMailboxFlag } from "react-icons/bs";
@@ -47,7 +47,6 @@ export default function Page5({ goNext }) {
 
 	return (
 		<div className="flex gap-[5vw] items-center justify-center min-h-[90vh] w-[85vw] mx-auto">
-			{/* Character + Intro */}
 			<div className="flex flex-col max-w-[30vw]">
 				<motion.h2
 					className="text-[4vh] handlee font-extrabold"
@@ -75,7 +74,6 @@ export default function Page5({ goNext }) {
 				</div>
 			</div>
 
-			{/* Mailbox Section */}
 			<div className="w-[45vw] py-[10vh] pb-[15vh] max-h-screen overflow-scroll pr-[2vw] text-center relative">
 				<motion.h2
 					initial={{ opacity: 0, y: 10 }}
@@ -86,7 +84,6 @@ export default function Page5({ goNext }) {
 					You got some mail! Open the mailbox to read it.
 				</motion.h2>
 
-				{/* Mailbox Icon + Peep next to it */}
 				<div className="flex justify-center items-center gap-6 mt-8">
 					<motion.div
 						initial={{ opacity: 0, y: 10 }}
@@ -108,7 +105,6 @@ export default function Page5({ goNext }) {
 						)}
 					</motion.div>
 
-					{/* Small character beside mailbox */}
 					<motion.div
 						initial={{ opacity: 0, y: 10 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -122,7 +118,6 @@ export default function Page5({ goNext }) {
 					</motion.div>
 				</div>
 
-				{/* Riddle Gate */}
 				<AnimatePresence>
 					{mailOpened && !riddleSolved && (
 						<motion.div
@@ -142,7 +137,6 @@ export default function Page5({ goNext }) {
 
 							{!wrongAnswer ? (
 								<div className="flex flex-col gap-4 items-center">
-									{/* First row with two buttons */}
 									<div className="flex gap-6">
 										{currentRiddle.choices.slice(0, 2).map((choice, i) => (
 											<div
@@ -164,7 +158,6 @@ export default function Page5({ goNext }) {
 										))}
 									</div>
 
-									{/* Second row with last button */}
 									<div className="relative w-[10vw] flex items-center justify-center h-[6vh] cursor-pointer">
 										<img
 											src="/imgs/frame1.png"
@@ -190,7 +183,6 @@ export default function Page5({ goNext }) {
 					)}
 				</AnimatePresence>
 
-				{/* Letter */}
 				<AnimatePresence mode="wait">
 					{mailOpened && riddleSolved && (
 						<Letter
@@ -207,3 +199,4 @@ export default function Page5({ goNext }) {
 		</div>
 	);
 }
+ */
