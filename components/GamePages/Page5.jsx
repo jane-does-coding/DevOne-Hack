@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs, SiMongodb } from "react-icons/si";
 
-export default function Page1({ goNext }) {
+export default function Page5({ goNext }) {
 	const TypewriterText = ({ text }) => {
 		const [displayedText, setDisplayedText] = useState("");
 

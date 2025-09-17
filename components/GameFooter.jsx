@@ -4,7 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FaGithubAlt } from "react-icons/fa6";
 import { FaVolumeMute } from "react-icons/fa";
 
-const GameFooter = ({ step, pages, setStep }) => {
+const GameFooter = ({ step }) => {
 	return (
 		<div className="fixed bottom-0 left-0 w-[100vw] bg-neutral-800 py-[1.5vh] px-[2vw] flex items-center justify-between">
 			{/* Sound Button */}

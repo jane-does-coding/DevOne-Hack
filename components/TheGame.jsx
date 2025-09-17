@@ -12,7 +12,7 @@ import Page5 from "./GamePages/Page5";
 
 const TheGame = () => {
 	const [step, setStep] = useState(0);
-
+	/* 
 	const pages = [
 		{
 			component: <Intro goNext={() => goNext()} />,
@@ -50,13 +50,13 @@ const TheGame = () => {
 			label: "Outro",
 		},
 	];
-
+ */
 	const goNext = () => setStep((prev) => Math.min(prev + 1, pages.length - 1));
 	const goBack = () => setStep((prev) => Math.max(prev - 1, 0));
 
 	return (
 		<div className="min-h-[80vh] overflow-hidden">
-			<AnimatePresence mode="wait">
+			{/* 	<AnimatePresence mode="wait">
 				<motion.div
 					key={pages[step].key}
 					initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -67,10 +67,11 @@ const TheGame = () => {
 				>
 					{pages[step].component}
 				</motion.div>
-			</AnimatePresence>
-
+			</AnimatePresence> */}
+			<Intro />
 			{/* pass setStep so footer can control navigation */}
-			<GameFooter step={step} pages={pages} setStep={setStep} />
+			{/* 			<GameFooter step={step} setStep={setStep} />
+			 */}{" "}
 		</div>
 	);
 };
