@@ -39,11 +39,11 @@ const TheGame = () => {
 			key: "page4",
 			label: "Page 4",
 		},
-		{
+		/* {
 			component: <Page5 goNext={() => goNext()} goBack={() => goBack()} />,
 			key: "page5",
 			label: "Page 5",
-		},
+		}, */
 		{
 			component: <Outro goBack={() => goBack()} />,
 			key: "outro",
