@@ -1,17 +1,13 @@
+// next.config.js
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	experimental: {
-		turbo: {
-			resolveAlias: {},
-		},
+	images: {
+		domains: ["example.com"],
 	},
-	webpack: (config) => {
-		return config;
+	experimental: {
+		turbo: false, // use Webpack instead of Turbopack
 	},
 };
 
-module.exports = {
-	...nextConfig,
-	// Force webpack instead of turbopack
-	experimental: { turbo: false },
-};
+export default nextConfig;
