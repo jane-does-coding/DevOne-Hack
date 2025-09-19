@@ -1,27 +1,41 @@
+"use client";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
-import { FaGithubAlt } from "react-icons/fa6";
-import { FaVolumeMute } from "react-icons/fa";
+import { FaGithubAlt, FaVolumeMute } from "react-icons/fa";
 
-const GameFooter = ({ step }) => {
+const pages = [
+	{ path: "/", label: "Intro" },
+	{ path: "/page1", label: "Challenge 1" },
+	{ path: "/page2", label: "Challenge 2" },
+	{ path: "/page3", label: "Challenge 3" },
+	{ path: "/page4", label: "Challenge 4" },
+	{ path: "/page5", label: "Challenge 5" },
+	{ path: "/outro", label: "Outro" },
+];
+
+const GameFooter = () => {
+	const pathname = usePathname();
+	const router = useRouter();
+
+	const currentStep = pages.findIndex((p) => p.path === pathname);
+
 	return (
-		<div className="fixed bottom-0 left-0 w-[100vw] bg-neutral-800 py-[1.5vh] px-[2vw] flex items-center justify-between">
-			{/* Sound Button */}
+		<div className="fixed bottom-0 left-0 w-[100vw] bg-neutral-800 py-[1.5vh] px-[2vw] flex items-center justify-between z-[999]">
 			<button className="text-[2vh] flex gap-[1vw] text-white">
 				Sound
 				<FaVolumeMute className="text-white text-[3.25vh]" />
 			</button>
 
-			{/* Level indicators (now clickable) */}
 			<div className="flex gap-[0.5vw]">
 				{pages.map((page, i) => (
 					<button
 						key={i}
-						onClick={() => setStep(i)}
+						onClick={() => router.push(page.path)}
 						className={`relative rounded-full border-[1px] h-[3.5vh] w-[3.5vh] group transition-colors duration-200 
               ${
-								i === step
+								i === currentStep
 									? "bg-white border-white"
 									: "border-white hover:bg-neutral-600"
 							}
@@ -34,15 +48,14 @@ const GameFooter = ({ step }) => {
 				))}
 			</div>
 
-			{/* Socials */}
 			<div className="flex gap-[1vw]">
-				<Link href={"/"}>
+				<Link href="https://github.com/" target="_blank">
 					<FaGithubAlt className="text-white text-[3.25vh]" />
 				</Link>
-				<Link href={"/"}>
+				<Link href="https://linkedin.com/" target="_blank">
 					<FaLinkedinIn className="text-white text-[3.25vh]" />
 				</Link>
-				<Link href={"/"}>
+				<Link href="mailto:someone@example.com">
 					<HiOutlineMail className="text-white text-[3.25vh]" />
 				</Link>
 			</div>
