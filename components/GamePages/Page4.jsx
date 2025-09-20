@@ -10,8 +10,11 @@ const projects = [
 		title: "Daily Bites",
 		desc: "Website to post, share, and explore recipes.",
 		links: [
-			{ label: "Live Demo", url: "https://example.com" },
-			{ label: "GitHub", url: "https://github.com" },
+			{ label: "Live Demo", url: "https://cooking-website-two.vercel.app/" },
+			{
+				label: "GitHub",
+				url: "https://github.com/jane-does-coding/DailyBites",
+			},
 		],
 	},
 	{
@@ -20,8 +23,12 @@ const projects = [
 		title: "Specify",
 		desc: "Website made specifically for students to manage their assignments.",
 		links: [
-			{ label: "GitHub", url: "https://github.com" },
-			{ label: "Docs", url: "https://example.com/docs" },
+			{ label: "GitHub", url: "https://github.com/jane-does-coding/Specify" },
+			{ label: "Demo", url: "https://specify.vercel.app/" },
+			{
+				label: "Dribbble",
+				url: "https://dribbble.com/shots/24077513-Specify-Task-Manager",
+			},
 		],
 	},
 	{
@@ -29,21 +36,50 @@ const projects = [
 		src: "/projects/project3.png",
 		title: "Pomodoro",
 		desc: "Pomodoro Timer with a video background.",
-		links: [{ label: "GitHub", url: "https://github.com" }],
+		links: [
+			{
+				label: "GitHub",
+				url: "https://github.com/jane-does-coding/Productivity-App",
+			},
+			{
+				label: "Demo",
+				url: "https://productivity-app-umber.vercel.app/",
+			},
+			{
+				label: "Dribbble",
+				url: "https://dribbble.com/shots/23752831-Pomodoro-Timer",
+			},
+		],
 	},
 	{
 		id: 4,
 		src: "/projects/project4.png",
 		title: "Mediblob",
 		desc: "Mediblob is a modern medical portal that connects patients and doctors.",
-		links: [{ label: "GitHub", url: "https://github.com" }],
+		links: [
+			{ label: "GitHub", url: "https://github.com/jane-does-coding/Mediblob" },
+			{ label: "Demo", url: "https://mediblob-gv6d.vercel.app/" },
+			{
+				label: "Dribbble",
+				url: "https://dribbble.com/shots/26324353-Mediblob",
+			},
+		],
 	},
 	{
 		id: 5,
 		src: "/projects/project5.png",
 		title: "Lumea",
 		desc: "Lumea calculates your carbon footprint based on lifestyle.",
-		links: [{ label: "GitHub", url: "https://github.com" }],
+		links: [
+			{
+				label: "GitHub",
+				url: "https://github.com/jane-does-coding/lumea-techpals",
+			},
+			{
+				label: "Demo",
+				url: "https://lumea-techpals.vercel.app/",
+			},
+		],
 	},
 ];
 
@@ -182,7 +218,29 @@ export default function Page4({ goNext }) {
 							</h3>
 							<TypewriterText text={activeProject.desc} />
 							<div className="flex gap-4 justify-center mt-[3vh]">
-								{activeProject.links.map((link, i) => (
+								{activeProject.links.slice(0, 2).map((link, i) => (
+									<div
+										key={i}
+										className="relative cursor-pointer hover:scale-95 transition w-[10vw] h-[5vh] flex items-center justify-center"
+									>
+										<img
+											src="/imgs/frame1.png"
+											className="w-full h-full absolute top-0 left-0 z-0 object-cover"
+											alt="Link frame"
+										/>
+										<a
+											href={link.url}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="z-10 text-[2vh] handlee font-semibold tracking-[1px] text-neutral-800 hover:text-neutral-600 transition"
+										>
+											{link.label}
+										</a>
+									</div>
+								))}
+							</div>
+							<div className="flex gap-4 justify-center mt-[1.5vh]">
+								{activeProject.links.slice(2, 4).map((link, i) => (
 									<div
 										key={i}
 										className="relative cursor-pointer hover:scale-95 transition w-[10vw] h-[5vh] flex items-center justify-center"

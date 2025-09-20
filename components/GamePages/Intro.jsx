@@ -71,7 +71,7 @@ const Intro = () => {
 						case, specifically
 					</span>
 					<span>
-						the game "The Evolution of Trust". while the sode and artwork are
+						the game "The Evolution of Trust". while the code and artwork are
 						still my original work
 					</span>
 				</p>

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { FaLinkedinIn } from "react-icons/fa6";
+import { FaHeart, FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaGithubAlt, FaVolumeMute } from "react-icons/fa";
 
@@ -24,9 +24,9 @@ const GameFooter = () => {
 
 	return (
 		<div className="fixed bottom-0 left-0 w-[100vw] bg-neutral-800 py-[1.5vh] px-[2vw] flex items-center justify-between z-[999]">
-			<button className="text-[2vh] flex gap-[1vw] text-white">
-				Sound
-				<FaVolumeMute className="text-white text-[3.25vh]" />
+			<button className="text-[2vh] flex items-center justify-center gap-[0.5vw] text-white">
+				Made with <FaHeart className="text-[2.25vh] text-red-500" /> by
+				Yevheniia
 			</button>
 
 			<div className="flex gap-[0.5vw]">
