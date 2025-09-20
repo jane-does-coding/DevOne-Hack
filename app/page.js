@@ -2,7 +2,7 @@ import TheGame from "@/components/TheGame";
 
 export default function Home() {
 	return (
-		<div>
+		<div className="">
 			<TheGame />
 		</div>
 	);

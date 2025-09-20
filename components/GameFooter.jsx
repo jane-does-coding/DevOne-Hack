@@ -12,6 +12,7 @@ const pages = [
 	{ path: "/page3", label: "Challenge 3" },
 	{ path: "/page4", label: "Challenge 4" },
 	{ path: "/page5", label: "Challenge 5" },
+	{ path: "/page6", label: "Challenge 6" },
 	{ path: "/outro", label: "Outro" },
 ];
 

@@ -77,7 +77,7 @@ export default function Page3({ goNext }) {
 					initial={{ opacity: 0, y: 10 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.3 }}
-					className="absolute cursor-pointer bottom-[5vh] right-[6vw] flex items-center justify-center  w-[10vw] h-[5vh]"
+					className="absolute cursor-pointer bottom-[10vh] right-[6vw] flex items-center justify-center  w-[10vw] h-[5vh]"
 				>
 					<img
 						src="/imgs/frame1.png"
@@ -185,7 +185,7 @@ export default function Page3({ goNext }) {
 							className="w-full h-[3.5vh] rounded-[3vh] bg-neutral-100 border-2 border-neutral-200 mt-[5vh] relative overflow-hidden"
 						>
 							<div
-								className="absolute top-0 left-0 bg-yellow-300/80 h-[3vh] rounded-[3vh] border-2 border-yellow-400/80 transition-all duration-75"
+								className="absolute top-0 left-0 bg-green-300/80 h-[3vh] rounded-[3vh] border-2 border-green-400/80 transition-all duration-75"
 								style={{ width: `${progress}%` }}
 							></div>
 						</motion.div>
