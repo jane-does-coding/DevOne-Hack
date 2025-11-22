@@ -52,7 +52,7 @@ const GameFooter = () => {
 				<Link href="https://github.com/jane-does-coding" target="_blank">
 					<FaGithubAlt className="text-white text-[3.25vh]" />
 				</Link>
-				<Link href="https://linkedin.com/yevheniia-simaka" target="_blank">
+				<Link href="https://www.linkedin.com/in/yevheniia-simaka/" target="_blank">
 					<FaLinkedinIn className="text-white text-[3.25vh]" />
 				</Link>
 				<Link href="mailto:yevheniiasimaka@gmail.com">
